@@ -87,8 +87,8 @@ class Application(Gtk.Application):
         self.quit_on_game_exit = False
         self.style_manager = None
 
-        if os.geteuid() == 0:
-            NoticeDialog(_("Running Lutris as root is not recommended and may cause unexpected issues"))
+        # if os.geteuid() == 0:
+        #     NoticeDialog(_("Running Lutris as root is not recommended and may cause unexpected issues"))
 
         try:
             self.css_provider.load_from_path(os.path.join(datapath.get(), "ui", "lutris.css"))
